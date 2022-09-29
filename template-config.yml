@@ -1,0 +1,9 @@
+site:
+  title: "Filipe Soares - Timeline"
+  description: "Welcome to my personal timeline"
+personal:
+  name: "Filipe Soares"
+  avatar: "https://github.com/filipecsoares.png"
+  socialNetworks:
+    youtube: 
+    github: "https://www.github.com/filipecsoares"
