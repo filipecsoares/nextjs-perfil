@@ -54,8 +54,8 @@ Feed.Header = () => {
             height: { xs: '100px', md: '128px' },
             borderRadius: '100%',
           }}
-          src="https://github.com/omariosouto.png"
-          alt="Imagem de perfil do Mario Souto"
+          src="https://github.com/filipecsoares.png"
+          alt="Perfil image"
         />
 
         <Box
@@ -74,7 +74,7 @@ Feed.Header = () => {
         </Box>
       </Box>
       <Text tag="h1" variant="heading4">
-        Mario Souto
+        Filipe Soares
       </Text>
       
       {/* <Link href="https://youtube.com/DevSoutinho">

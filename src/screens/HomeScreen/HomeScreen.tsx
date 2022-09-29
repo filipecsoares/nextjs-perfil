@@ -1,6 +1,4 @@
 import Box from "@src/components/Box/Box";
-import Link from "@src/components/Link/Link";
-import Text from "@src/components/Text/Text";
 import templatePageHOC from "@src/services/template/templatePageHOC";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Background from "./patterns/Background/Background";
