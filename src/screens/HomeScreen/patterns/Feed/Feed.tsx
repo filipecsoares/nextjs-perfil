@@ -6,12 +6,14 @@ import Image from "@src/components/Image/Image";
 import Link from "@src/components/Link/Link";
 import Button from "@src/components/Button/Button";
 import { useTheme } from "@src/theme/ThemeProvider";
+import { useTemplateConfig } from '@src/services/template/TemplateConfigContext';
 
 interface FeedProps {
   children: React.ReactNode;
 }
 export default function Feed({ children }) {
   const theme = useTheme();
+  const templateConfig = useTemplateConfig();
   return (
     <Box
       styleSheet={{
@@ -31,6 +33,7 @@ export default function Feed({ children }) {
 
 Feed.Header = () => {
   const theme = useTheme();
+  const templateConfig = useTemplateConfig();
 
   return (
     <Box
@@ -54,7 +57,7 @@ Feed.Header = () => {
             height: { xs: '100px', md: '128px' },
             borderRadius: '100%',
           }}
-          src="https://github.com/filipecsoares.png"
+          src={templateConfig?.personal?.avatar}
           alt="Perfil image"
         />
 
@@ -74,8 +77,30 @@ Feed.Header = () => {
         </Box>
       </Box>
       <Text tag="h1" variant="heading4">
-        Filipe Soares
+        {templateConfig?.personal?.name}
       </Text>
+
+      <Box 
+        styleSheet={{
+          flexDirection: "row",
+          gap: "4px",
+        }}>
+          {Object.keys(templateConfig.personal.socialNetworks).map(key => {
+            const socialNetwork = templateConfig.personal.socialNetworks[key];
+            if(socialNetwork) {
+              return (
+                <Link
+                  key={key}
+                  target="_blank"
+                  href={templateConfig.personal.socialNetworks[key]}
+                >
+                    <Icon name={key as any} />
+                </Link>
+              )
+            }
+            return null;
+          })}
+      </Box>
       
       {/* <Link href="https://youtube.com/DevSoutinho">
         <Icon name="youtube" />
