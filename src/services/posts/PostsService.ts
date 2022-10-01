@@ -8,7 +8,8 @@ export interface Post {
         url: string;
         excerpt: string;
         tags: string[];
-    }
+    };
+    image?: string;
     slug: string;
     title: string;
     content: string;
@@ -30,6 +31,7 @@ export default function PostsService() {
                         tags: data.tags,
                         url: data.url,
                     },
+                    image: data.image || "",
                     content,
                     title: data.title,
                     slug: fileName.replace(".md", ""),
@@ -38,7 +40,6 @@ export default function PostsService() {
 
             });
             const posts = Promise.all(postsPromise);
-            console.log(posts);
             return posts
         }
     }
