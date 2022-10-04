@@ -15,7 +15,6 @@ interface FeedProps {
 }
 export default function Feed({ children }) {
   const theme = useTheme();
-  const templateConfig = useTemplateConfig();
   return (
     <Box
       styleSheet={{

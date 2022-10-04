@@ -7,6 +7,7 @@ export interface TemplateConfig {
     }
     personal?: {
         name?: string;
+        initials?: string;
         avatar?: string;
         socialNetworks?: {
             youtube?: string;

@@ -2,10 +2,12 @@ import Box from "@src/components/Box/Box";
 import Button from "@src/components/Button/Button";
 import Icon from "@src/components/Icon/Icon";
 import Text from "@src/components/Text/Text";
+import { useTemplateConfig } from "@src/services/template/TemplateConfigContext";
 import theme from "@src/theme/theme";
 import { useTheme } from "@src/theme/ThemeProvider";
 
 export default function Menu() {
+  const templateConfig = useTemplateConfig();
   const theme = useTheme();
   const baseSize = '40px';
   return (
@@ -38,7 +40,7 @@ export default function Menu() {
         }}
       >
         <Text>
-          MS
+          {templateConfig?.personal?.initials}
         </Text>
       </Button.Base>
 

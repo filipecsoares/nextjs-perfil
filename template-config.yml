@@ -3,7 +3,9 @@ site:
   description: "Welcome to my personal timeline"
 personal:
   name: "Filipe Soares"
+  initials: "FS"
   avatar: "https://github.com/filipecsoares.png"
   socialNetworks:
     youtube: "https://www.youtube.com/channel/UC_NjE4TAOhnqmshjfVoCL0Q"
     github: "https://www.github.com/filipecsoares"
+    linkedin: "https://www.linkedin.com/in/filipe-soares-897a2151/"
